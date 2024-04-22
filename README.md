@@ -1,6 +1,1 @@
-This code is a program that determines whether a file is malware by calculating its MD5 hash value to see whether it is in a malware database. I will explain each function and its main parts.
-calculate_md5(file_path): This function calculates the MD5 hash value of a given file. To do this, we use hashlib.md5() to create an MD5 hash object, open the file in binary mode ("rb") and read it in 4KB increments (in chunks lol), updating the MD5 hash value. Once the file has been read, the MD5 hash value is returned. If the file cannot be found, it processes FileNotFoundError, outputs a message that the file cannot be found, and returns None.
-is_virus(file_path, virus_database): This function checks whether the given file is malicious code. First, use calculate_md5() to get the MD5 hash value of the file. Afterwards, if the fetched MD5 hash value is None, the file is considered not found and returns False. Otherwise, it checks if the corresponding MD5 hash value exists in the malware database. Returns True if the corresponding MD5 hash value is in the malware database, otherwise returns False.
-virus_database: This variable is a dictionary of MD5 hash values ​​of malware and the corresponding malware name. This example contains the MD5 hash values ​​and names of several pieces of malware.
-file_path: This variable represents the path of the file to be tested.
-The program determines whether a file is malware by looking at a given file, calculating its MD5 hash value, and checking whether that hash value is in a malware database.
+
